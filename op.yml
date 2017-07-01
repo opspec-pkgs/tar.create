@@ -1,0 +1,33 @@
+name: github.com/opspec-pkgs/tar.create
+description: creates a tar archive
+inputs:
+  contents:
+    dir:
+      description: contents of the archive
+      default: .
+  exclude:
+    string:
+      description: exclusion pattern
+      default: " "
+  gzip:
+    string:
+      constraints: { enum: ['true', 'false'] }
+      description: if the archive should be gzip'd
+outputs:
+  tar:
+    file:
+      description: tar archive
+version: 1.0.0
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    dirs:
+      /contents: contents
+    files:
+      /cmd.sh:
+      /archive: tar
+    envVars:
+      exclude:
+      gzip:
+    image: { ref: 'alpine:3.6' }
+    workDir: /
