@@ -1,7 +1,7 @@
-# problem statement
+# Problem statement
 creates a tar archive
 
-# example usage
+# Example usage
 
 > note: in examples, VERSION represents a version of the tar.create pkg
 
@@ -29,3 +29,8 @@ op:
   outputs: 
     tar:
 ```
+
+# Support
+
+join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or [open an issue](https://github.com/opspec-pkgs/tar.create/issues)
