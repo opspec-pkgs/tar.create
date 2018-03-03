@@ -22,10 +22,10 @@ run:
   container:
     cmd: [ /cmd.sh ]
     dirs:
-      /contents: contents
+      /contents: $(contents)
     files:
       /cmd.sh:
-      /archive: tar
+      /archive: $(tar)
     envVars:
       exclude:
       gzip:
